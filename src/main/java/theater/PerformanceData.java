@@ -25,10 +25,10 @@ public class PerformanceData {
     /**
      * a.
      * @return .
-     * @throws RuntimeException amount.
+     * @throws RuntimeException a.
      */
     public int amountFor() {
-        int result = 0;
+        int result;
         switch (getType()) {
             case "tragedy":
                 result = Constants.TRAGEDY_BASE_AMOUNT;
@@ -49,6 +49,19 @@ public class PerformanceData {
                 break;
             default:
                 throw new RuntimeException(String.format("unknown type: %s", getType()));
+        }
+        return result;
+    }
+
+    /**
+     *
+     * @return a.
+     */
+    public  int volumeCredits() {
+        int result = Math.max(getAudience() - Constants.BASE_VOLUME_CREDIT_THRESHOLD, 0);
+        // add extra credit for every five comedy attendees
+        if ("comedy".equals(getType())) {
+            result += getAudience() / Constants.COMEDY_EXTRA_VOLUME_FACTOR;
         }
         return result;
     }

@@ -9,12 +9,12 @@ import java.util.Map;
  * This class generates a statement for a given invoice of performances.
  */
 public class StatementPrinter {
-    public final statementData statementdata;
+    public final Statementdata statementdata;
     public StatementPrinter(Invoice invoice, Map<String, Play> plays) {
-        this.statementdata = new statementData(invoice, plays);
+        this.statementdata = new Statementdata(invoice, plays);
     }
 
-    public statementData getStatementdata() {
+    public Statementdata getStatementdata() {
         return statementdata;
     }
 

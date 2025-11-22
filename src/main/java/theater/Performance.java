@@ -1,7 +1,7 @@
 package theater;
 
 /**
- * Class representing a performance of a play..
+ * Class representing a performance of a play.
  */
 public class Performance {
 
