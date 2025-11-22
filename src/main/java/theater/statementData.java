@@ -31,7 +31,7 @@ public class statementData {
      * get.
      * @return get.
      */
-    public int getTotalAmount() {
+    public int totalAmount() {
         int result = 0;
         for (PerformanceData performanceData : performances ) {
             result  += performanceData.amountFor();

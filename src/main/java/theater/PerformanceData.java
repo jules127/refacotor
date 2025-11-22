@@ -22,6 +22,11 @@ public class PerformanceData {
         return play.getType();
     }
 
+    /**
+     * a.
+     * @return .
+     * @throws RuntimeException amount.
+     */
     public int amountFor() {
         int result = 0;
         switch (getType()) {

@@ -14,6 +14,10 @@ public class StatementPrinter {
         this.statementdata = new statementData(invoice, plays);
     }
 
+    public statementData getStatementdata() {
+        return statementdata;
+    }
+
     /**
      * Returns a formatted statement of the invoice associated with this printer.
      * @return the formatted statement
@@ -35,12 +39,12 @@ public class StatementPrinter {
                     performancedata.getAudience()));
         }
 
-        result.append(String.format("Amount owed is %s%n", usd(statementdata.getTotalAmount())));
+        result.append(String.format("Amount owed is %s%n", usd(statementdata.totalAmount())));
         result.append(String.format("You earned %s credits%n", statementdata.volumeCredits()));
         return result.toString();
     }
 
-    private String usd(int totalAmount) {
+    public String usd(int totalAmount) {
         return NumberFormat.getCurrencyInstance(Locale.US).format(totalAmount / Constants.PERCENT_FACTOR);
     }
 
