@@ -6,14 +6,14 @@ import java.util.List;
 
 /**
  *
- *
+ * Initializer.
  */
-class Statementdata {
+class Statement {
     private final Invoice invoice;
     private final Map<String, Play> plays;
     private final List<PerformanceData> performances;
 
-    public Statementdata(Invoice invoice, Map<String, Play> plays) {
+    public Statement(Invoice invoice, Map<String, Play> plays) {
         this.invoice = invoice;
         this.plays = plays;
         this.performances = new ArrayList<>();
@@ -47,8 +47,8 @@ class Statementdata {
     }
 
     /**
-     * get.
-     * @return get.
+     * Get.
+     * @return Get.
      */
     public int volumeCredits() {
         int result = 0;

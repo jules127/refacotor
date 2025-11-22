@@ -11,14 +11,14 @@ import java.util.Map;
 public class StatementPrinter {
     private final Invoice invoice;
     private final Map<String, Play> plays;
-    public final Statementdata statementdata;
+    public final Statement statementdata;
     public StatementPrinter(Invoice invoice, Map<String, Play> plays) {
-        this.statementdata = new Statementdata(invoice, plays);
+        this.statementdata = new Statement(invoice, plays);
         this.invoice = invoice;
         this.plays = plays;
     }
 
-    public Statementdata getStatementdata() {
+    public Statement getStatementdata() {
         return statementdata;
     }
 
