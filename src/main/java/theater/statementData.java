@@ -15,8 +15,12 @@ public class statementData {
         this.plays = plays;
         this.performances = new ArrayList<>();
         for (Performance performance : invoice.getPerformances()) {
-            performances.add(new PerformanceData(performance, plays.get(performance.getPlayID())));
+            performances.add(createPerformanceData(performance));
         }
+    }
+
+    private PerformanceData createPerformanceData(Performance performance) {
+        return new PerformanceData(performance, plays.get(performance.getPlayID()));
     }
 
     public String getCustomer() {
@@ -46,11 +50,7 @@ public class statementData {
     public int volumeCredits() {
         int result = 0;
         for (PerformanceData performanceData : performances) {
-            result += Math.max(performanceData.getAudience() - Constants.BASE_VOLUME_CREDIT_THRESHOLD, 0);
-            // add extra credit for every five comedy attendees
-            if ("comedy".equals(performanceData.getType())) {
-                result += performanceData.getAudience() / Constants.COMEDY_EXTRA_VOLUME_FACTOR;
-            }
+            result += performanceData.volumeCredits();
         }
         return result;
     }
