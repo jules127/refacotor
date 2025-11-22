@@ -1,10 +1,14 @@
 package theater;
-
-
+/**
+ *
+ *
+ * @null
+ */
 public class PerformanceData {
 
     private final Performance performance;
     private final Play play;
+
     public PerformanceData(Performance performance, Play play) {
         this.performance = performance;
         this.play = play;
