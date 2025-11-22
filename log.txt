@@ -1,8 +1,11 @@
-Task 1.1
-Task 1.2
-Task 2.1
-Task 2.2
-Task 2.3
-Task 2.4
-Task 3.1
-Task 3.2
+e6ab2a1 (HEAD -> main) Task 1.1.
+47b9cc7 Task 1.1.
+93a4662 Task 3.2 finish
+9d02069 Task 3.2
+302f571 Task 3.2
+37ff9e3 Task 3.1
+fc7845f Task 2.4
+0145299 Task 2.4
+e942032 Task 2.2
+5f96661 Task 2.3
+c2b4c16 Task 1.2
